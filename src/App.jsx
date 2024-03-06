@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ChangePassword from './components/changepassword';
 import RecoveryPassword from './components/recoverypassword';
+import Login from './components/login';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <ChangePassword />
       <RecoveryPassword />
+      <Login />
     </div>
   );
 }
