@@ -5,37 +5,32 @@ import { Grid, Paper } from '@mui/material';
 
 const columns = [
   {
-    field: 'Name',
-    headerName: 'Nombre Completo',
+    field: 'nombre',
+    headerName: 'Nombre',
     width: 100,
     editable: false,
   },
   {
-    field: 'correo',
-    headerName: 'Correo',
+    field: 'rol',
+    headerName: 'Rol',
     sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    width: 120
   },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 14 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 31 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 31 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 11 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-];
+  {id:1, nombre: 'Juan', rol: 'Adminstrador' },
+  {id:2, nombre: 'Pedro', rol: 'Inspector' },
+  {id:3, nombre: 'Pablo', rol: 'Administrador' },
+  {id:4, nombre: 'Jesus', rol: 'Inspector' },
 
-export default function DataGridDemo() {
+];
+const paperStyle={padding:20, height: '70vh', width: 280, margin: "20px auto"}
+
+export default function UserList() {
   return (
     <Grid>
-    <Paper sx={{padding:20, height: '70vh', width: 280, margin: "20px auto"}}>
+    <Paper elevation={10} style={paperStyle}>
       <DataGrid
         rows={rows}
         columns={columns}
