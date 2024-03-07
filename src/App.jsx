@@ -4,6 +4,7 @@ import ChangePassword from './components/changepassword';
 import RecoveryPassword from './components/recoverypassword';
 import Login from './components/login';
 import UserList from './components/userlist';
+import UserForm from './components/userform';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <RecoveryPassword />
       <Login />
       <UserList />
+      <UserForm />
     </div>
   );
 }
