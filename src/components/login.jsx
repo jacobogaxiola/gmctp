@@ -1,29 +1,39 @@
 import { Avatar, Grid, Paper, TextField, FormControlLabel, Checkbox, Button, Typography, Link} from "@mui/material";
 import React, { useState } from "react";
-import LockPersonOutlinedIcon from '@mui/icons-material/LockPersonOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 const Login=()=>{
     const paperStyle={padding:20, height: '70vh', width: 280, margin: "20px auto"}
     const avatarStyle={backgroundColor:"orange"}
-    const textFieldStyle={margin: "15px 0 0 0 "}
-    const buttonStyle={backgroundColor:"orange"}
+    const ctrlStyle={margin: "15px 0 0 0 "}
+    const buttonStyle={backgroundColor:"orange", margin: "15px 0 0 0 "}
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const onEmailChange = (e)=>{
-        let email=e.target.value
+    const isValidEmail = ()=>{
         let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if(email.match(validRegex)) {
-            console.log("Correo ok");
-            setEmail(email);
-        }
+        if(email.match(validRegex))
+            return true
         else
-            console.log("Correo inválido");
+            return false
     }
-    const onLogin = ()=>{
-        
+
+    const isValidPassword = ()=>{
+        let passwordRegExp  = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if(password.match(passwordRegExp ))
+            return true
+        else
+            return false
+    }
+
+    const validateLogin = ()=>{
+        if(!isValidEmail())
+            console.log("El correo es INVÁLIDO")
+        else if(!isValidPassword())
+            console.log("La contraseña es INVÁLIDA")
+        else
+            console.log("Todo OK")
     }
 
     return(
@@ -36,28 +46,31 @@ const Login=()=>{
   
                 <TextField 
                     label="Correo Electrónico" 
+                    style={ctrlStyle}
                     placeholder="Teclea tu correo..." 
-                    variant="outlined" fullWidth required 
-                    onChange={onEmailChange}
+                    variant="outlined" 
+                    fullWidth 
+                    required 
+                    onChange={(e) => setEmail(e.target.value)}
                 />
                 <TextField 
                     label="Contraseña" 
-                    style={textFieldStyle}  
+                    style={ctrlStyle}
                     placeholder="Teclea tu contraseña..." 
                     type="password" 
                     variant="outlined" fullWidth required
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <FormControlLabel  control={<Checkbox name="checkedB" color="primary"/>} label="Recordarme"/>
                 <Button 
                     type='submit' 
                     color='primary' 
                     variant="contained" 
                     style={buttonStyle} 
                     fullWidth
+                    onClick={validateLogin}
                 >Acceder
                 </Button>
-                <Typography>
+                <Typography style={ctrlStyle}>
                     <Link href="#">
                         ¿Olvidaste tu contraseña?
                     </Link>
