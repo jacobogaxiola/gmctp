@@ -52,6 +52,8 @@ const Login=()=>{
                     fullWidth 
                     required 
                     onChange={(e) => setEmail(e.target.value)}
+                    error={email.length!=0 && !isValidEmail()}
+                    helperText={email.length!=0 && !isValidEmail() && "Formato o correo incompleto"}
                 />
                 <TextField 
                     label="Contraseña" 
@@ -60,6 +62,8 @@ const Login=()=>{
                     type="password" 
                     variant="outlined" fullWidth required
                     onChange={(e) => setPassword(e.target.value)}
+                    error={password.length!=0 && !isValidPassword()}
+                    helperText={password.length!=0 && !isValidPassword() && "Mayúsculas, minúsculas y números (+8)"}
                 />
                 <Button 
                     type='submit' 
