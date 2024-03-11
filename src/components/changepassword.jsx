@@ -61,6 +61,8 @@ const ChangePassword=()=>{
                  fullWidth 
                  required 
                  onChange={(e) => setCurrentPassword(e.target.value)}
+                 error={currentPassword.length!=0 && !isValidCurrentPassword()}
+                 helperText={currentPassword.length!=0 && !isValidCurrentPassword() && "Formato o contraseña incompleta"}
                 />
                 <TextField style={ctrlStyle} 
                  label="Nueva contraseña" 
@@ -70,6 +72,8 @@ const ChangePassword=()=>{
                  fullWidth 
                  required 
                  onChange={(e) => setNewPassword(e.target.value)}
+                 error={newPassword.length!=0 && !isValidNewPassword()}
+                 helperText={newPassword.length!=0 && !isValidNewPassword() && "Formato o contraseña incompleta"}
                 />
                 <TextField style={ctrlStyle} 
                 label="Confirmar nueva contraseña" 
@@ -79,6 +83,8 @@ const ChangePassword=()=>{
                  fullWidth 
                  required 
                  onChange={(e) => setConfirmation(e.target.value)}
+                 error={confirmation.length!=0 && !isValidConfirmation()}
+                 helperText={confirmation.length!=0 && !isValidConfirmation() && "Formato o contraseña incompleta"}
                  />
                 <Grid style={ctrlStyle} align="center">
                     <Button 
