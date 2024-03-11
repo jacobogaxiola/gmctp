@@ -53,7 +53,7 @@ const Login=()=>{
                     required 
                     onChange={(e) => setEmail(e.target.value)}
                     error={email.length!=0 && !isValidEmail()}
-                    helperText={email.length!=0 && !isValidEmail() && "Ingrese un correo válido"}
+                    helperText={email.length!=0 && !isValidEmail() && "Formato o correo incompleto"}
                 />
                 <TextField 
                     label="Contraseña" 
