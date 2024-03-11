@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import { Grid, Paper } from '@mui/material';
 
@@ -7,30 +6,33 @@ const columns = [
   {
     field: 'nombre',
     headerName: 'Nombre',
-    width: 100,
+    width: 100,  
     editable: false,
   },
   {
     field: 'rol',
     headerName: 'Rol',
     sortable: false,
-    width: 120
+    width: 120,
   },
 ];
 
 const rows = [
-  {id:1, nombre: 'Juan', rol: 'Adminstrador' },
-  {id:2, nombre: 'Pedro', rol: 'Inspector' },
-  {id:3, nombre: 'Pablo', rol: 'Administrador' },
-  {id:4, nombre: 'Jesus', rol: 'Inspector' },
+  {id:1, nombre: 'Diego', rol: 'Adminstrador' },
+  {id:2, nombre: 'Francisco', rol: 'Inspector' },
+  {id:3, nombre: 'Luis Gael', rol: 'Administrador' },
+  {id:4, nombre: 'jisus', rol: 'Inspector' },
 
 ];
-const paperStyle={padding:20, height: '70vh', width: 280, margin: "20px auto"}
+const paperStyle={padding:20, height: '70', width: 280, margin: "20px auto"}
 
 export default function UserList() {
   return (
     <Grid>
     <Paper elevation={10} style={paperStyle}>
+    <Grid align="center">
+        <h2>Lista de Usuarios</h2>
+    </Grid>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -42,7 +44,6 @@ export default function UserList() {
           },
         }}
         pageSizeOptions={[5]}
-        checkboxSelection
         disableRowSelectionOnClick
       />
     </Paper>
