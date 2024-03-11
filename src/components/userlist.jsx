@@ -24,7 +24,7 @@ const rows = [
   {id:4, nombre: 'jisus', rol: 'Inspector' },
 
 ];
-const paperStyle={padding:20, height: '70vh', width: 280, margin: "20px auto"}
+const paperStyle={padding:20, height: '70', width: 280, margin: "20px auto"}
 
 export default function UserList() {
   return (
