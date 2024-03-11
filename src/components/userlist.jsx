@@ -20,7 +20,7 @@ const columns = [
 const rows = [
   {id:1, nombre: 'Diego', rol: 'Adminstrador' },
   {id:2, nombre: 'Francisco', rol: 'Inspector' },
-  {id:3, nombre: 'Luis', rol: 'Administrador' },
+  {id:3, nombre: 'Luis Gael', rol: 'Administrador' },
   {id:4, nombre: 'jisus', rol: 'Inspector' },
 
 ];
