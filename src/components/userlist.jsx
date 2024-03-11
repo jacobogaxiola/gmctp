@@ -49,7 +49,6 @@ export default function UserList() {
           },
         }}
         pageSizeOptions={[5]}
-        checkboxSelection
         disableRowSelectionOnClick
       />
     </Paper>
