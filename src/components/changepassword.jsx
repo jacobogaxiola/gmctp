@@ -7,22 +7,43 @@ const ChangePassword=()=>{
     const avatarStyle={backgroundColor:"orange"}
     const ctrlStyle={margin:"15px 0 0 0"}
     
-    const [currentpassword, setCurrentPassword] = useState("")
-    const [newpassword, setNewpassword] = useState("")
+    const [currentPassword, setCurrentPassword] = useState("")
+    const [newPassword, setNewPassword] = useState("")
     const [confirmation, setConfirmation] = useState("")
 
-    const onCurrentpasswordChange = (e)=>{
-        let password=e.target.value
+    const isValidCurrentPassword = ()=>{
         let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if(password.match(validRegex)) {
-            console.log("Contraseña ok");
-            setCurrentpassword(password);
-        }
+        if(currentPassword.match(validRegex))
+            return true
         else
-            console.log("Contraseña inválida");
+            return false
     }
-    const onChangePassword = ()=>{
 
+    const isValidNewPassword = ()=>{
+        let passwordRegExp  = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if(newPassword.match(passwordRegExp ))
+            return true
+        else
+            return false
+    }
+
+    const isValidConfirmation = ()=>{
+        let passwordRegExp  = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if(confirmation.match(passwordRegExp ))
+            return true
+        else
+            return false
+    }
+
+    const validateChangePassword = ()=>{
+        if(!isValidCurrentPassword())
+            console.log("La contraseña actual es INVÁLIDO")
+        else if(!isValidNewPassword())
+            console.log("La nueva contraseña es INVÁLIDA")
+        else if(!isValidConfirmation())
+            console.log("La confirmacion es INVÁLIDA")
+        else
+            console.log("Todo OK")
     }
 
     return(
@@ -33,25 +54,38 @@ const ChangePassword=()=>{
                     <h2>Recuperacion de contraseña</h2>
                 </Grid>
                 <TextField style={ctrlStyle} 
-                onChange={onCurrentpasswordChange}
-                label="Contraseña actual" 
-                placeholder="Teclea tu contraseña..." 
-                type="password" variant="outlined" 
-                fullWidth required />
-                <TextField style={ctrlStyle} 
-                label="Nueva contraseña" 
-                placeholder="Teclea tu contraseña..." 
-                type="password"
+                 label="Contraseña actual" 
+                 placeholder="Teclea tu contraseña..." 
+                 type="password" 
                  variant="outlined" 
-                fullWidth required />
+                 fullWidth 
+                 required 
+                 onChange={(e) => setCurrentPassword(e.target.value)}
+                />
+                <TextField style={ctrlStyle} 
+                 label="Nueva contraseña" 
+                 placeholder="Teclea tu contraseña..." 
+                 type="password"
+                 variant="outlined" 
+                 fullWidth 
+                 required 
+                 onChange={(e) => setNewPassword(e.target.value)}
+                />
                 <TextField style={ctrlStyle} 
                 label="Confirmar nueva contraseña" 
                 placeholder="Teclea tu contraseña..."
                  type="password"
                   variant="outlined" 
-                 fullWidth required />
+                 fullWidth 
+                 required 
+                 onChange={(e) => setConfirmation(e.target.value)}
+                 />
                 <Grid style={ctrlStyle} align="center">
-                    <Button variant="contained">Cambiar</Button>
+                    <Button 
+                    variant="contained"
+                    onClick={validateChangePassword}
+                    >Cambiar
+                    </Button>
                 </Grid>
             </Paper>
         </Grid>
