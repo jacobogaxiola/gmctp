@@ -15,7 +15,7 @@ const RecoveryPassword=()=>{
         <Grid>
             <Paper elevation={10} style={paperStyle}>
                 <Grid align="center"><Avatar style={otherStyle}><LockClockRoundedIcon/></Avatar></Grid>
-                <h3>Cambia tu contraseña</h3>
+                <h3>Recupera tu contraseña</h3>
                 <TextField label="Nueva contraseña" placeholder="Teclea nueva contraseña" type="password" variant="outlined" fullWidth required/>
                 <TextField label="Confirmar contraseña" style={textFieldStyle} placeholder="Repite de nuevo tu contraseña" type="password" variant="outlined" fullWidth required/>
                 <Grid align="center"><Button variant="contained" style={ctrlStyle}>Cambiar</Button></Grid>
