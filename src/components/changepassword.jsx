@@ -51,7 +51,7 @@ const ChangePassword=()=>{
             <Paper elevation={10} style={paperStyle}>
                 <Grid align="center">
                     <Avatar style={avatarStyle}><LockResetOutlinedIcon/></Avatar>
-                    <h2>Recuperacion de contraseña</h2>
+                    <h2>Cambia tu contraseña</h2>
                 </Grid>
                 <TextField style={ctrlStyle} 
                  label="Contraseña actual" 
