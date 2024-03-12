@@ -1,3 +1,11 @@
+.datagridHeader {
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  color: white;
+  background-color: orange;
+}
+
 .App {
   text-align: center; 
 }
