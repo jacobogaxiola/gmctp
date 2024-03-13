@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import { DataGrid } from '@mui/x-data-grid';
-import { Grid, Paper } from '@mui/material';
 
+import { DataGrid } from '@mui/x-data-grid';
+import { AppBar, Grid, IconButton, Paper, Toolbar, Typography } from '@mui/material';
+import MenuIcon from "@mui/icons-material/Menu";
 
 
 const columns = [
@@ -87,9 +87,21 @@ export default function UserList() {
   return (
     <Grid> 
     <Paper elevation={10} style={paperStyle}>
-      <Grid align="center">
-        <h2>Lista de Inspeccion</h2>
-    </Grid>
+    <AppBar position="static">
+          <Toolbar variant="dense">
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ m: 0, mr: 2, height: 50 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" color="inherit" component="div">
+              Lista de inspeccion
+            </Typography>
+          </Toolbar>
+        </AppBar>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -101,7 +113,6 @@ export default function UserList() {
           },
         }}
         pageSizeOptions={[5]}
-        checkboxSelection
         disableRowSelectionOnClick
       />
 
