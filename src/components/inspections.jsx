@@ -4,6 +4,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Grid, Paper } from '@mui/material';
 
 
+
 const columns = [
   {
     field: 'fecha',
@@ -12,22 +13,64 @@ const columns = [
     editable: false,
   },
   {
-    field: 'placas',
-    headerName: 'Placas',
+    field: 'lugar de inspeccion',
+    headerName: 'lugar de inspeccion',
     sortable: false,
     width: 120
   },
   {
-    field: 'tipo',
-    headerName: 'Tipo',
+    field: 'placas de unidad 1',
+    headerName: 'placas de unidad 1',
+    width: 100,
+    editable: false,
+  },
+  {
+    field: 'tipo de unidad 1', 
+    headerName: 'Estatus',
+    sortable: false,
+    width: 120
+  },
+  {
+    field: 'placas de unidad 2',
+    headerName: 'placas de unidad 2',
+    width: 100,
+    editable: false,
+  },
+  {
+    field: 'tipo de unidad 2',
+    headerName: 'tipo de unidad 2',
+    sortable: false,
+    width: 120
+  },
+  {
+    field: 'placas de unidad 3',
+    headerName: 'placas de unidad 3',
+    width: 100,
+    editable: false,
+  },
+  {
+    field: 'tipo de unidad 3',
+    headerName: 'tipo de unidad 3',
+    sortable: false,
+    width: 120
+  },
+  {
+    field: 'placas dolli',
+    headerName: 'placas dolli',
     width: 100,
     editable: false,
   },
   {
     field: 'estatus',
-    headerName: 'Estatus',
+    headerName: 'estatus',
     sortable: false,
     width: 120
+  },
+  {
+    field: 'Motivo de cancelacion',
+    headerName: 'Motivo de cancelacion',
+    width: 100,
+    editable: false,
   },
 ];
 
@@ -38,12 +81,15 @@ const rows = [
   {id:4, fecha: '06/08/23', placas: '2309d47f4', tipo:'Camion', estatus:'(r)' },
 
 ];
-const paperStyle={padding:20, height: '70vh', width: 280, margin: "20px auto"}
+const paperStyle={padding:20, height: '20', width: 280, margin: "20px auto"}
 
 export default function UserList() {
   return (
     <Grid> 
     <Paper elevation={10} style={paperStyle}>
+      <Grid align="center">
+        <h2>Lista de Inspeccion</h2>
+    </Grid>
       <DataGrid
         rows={rows}
         columns={columns}
