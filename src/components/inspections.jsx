@@ -4,6 +4,8 @@ import { DataGrid } from '@mui/x-data-grid';
 import { AppBar, Grid, IconButton, Paper, Toolbar, Typography } from '@mui/material';
 import MenuIcon from "@mui/icons-material/Menu";
 
+const avatarStyle={backgroundColor:"orange"}
+const blancoEs={color:"white"}
 
 const columns = [
   {
@@ -88,16 +90,16 @@ export default function UserList() {
     <Grid> 
     <Paper elevation={10} style={paperStyle}>
     <AppBar position="static">
-          <Toolbar variant="dense">
+          <Toolbar style={avatarStyle}>
             <IconButton
               edge="start"
-              color="inherit"
+              color="white"
               aria-label="menu"
               sx={{ m: 0, mr: 2, height: 50 }}
             >
-              <MenuIcon />
+              <MenuIcon style={blancoEs}/>
             </IconButton>
-            <Typography variant="h6" color="inherit" component="div">
+            <Typography variant="h6" color="white" component="div">
               Lista de inspeccion
             </Typography>
           </Toolbar>
