@@ -59,7 +59,7 @@ const RecoveryPassword=()=>{
                  variant="outlined"
                  fullWidth required
                  onChange={(e) => setConfirmation(e.target.value)}
-                    error={confirmation.length!=0 && !isValidConfirmation()}
+                 error={confirmation.length!=0 && !isSamePassword()}
                  helperText={confirmation.length!=0 && !isSamePassword() && "Las contraseñas no coinciden"} 
                  />
                 <Grid align="center">
