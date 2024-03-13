@@ -38,3 +38,11 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.colorListado {
+  background-color: rgba(231, 169, 85, 0.7);
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  color: white;
+}

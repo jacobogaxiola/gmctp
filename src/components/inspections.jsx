@@ -5,11 +5,17 @@ import { AppBar, Grid, IconButton, Paper, Toolbar, Typography } from '@mui/mater
 import MenuIcon from "@mui/icons-material/Menu";
 
 const avatarStyle={backgroundColor:"orange"}
+
 const blancoEs={color:"white"}
+const separateColumns={marginTop: "15px" }
+
+
 
 const columns = [
   {
+    
     field: 'fecha',
+    headerClassName: 'datagridHeader', //////aqui cambie el color de la fecha
     headerName: 'Fecha',
     width: 100,
     editable: false,
@@ -104,7 +110,7 @@ export default function UserList() {
             </Typography>
           </Toolbar>
         </AppBar>
-      <DataGrid
+      <DataGrid style={separateColumns}
         rows={rows}
         columns={columns}
         initialState={{
