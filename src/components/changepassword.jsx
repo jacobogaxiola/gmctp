@@ -35,6 +35,13 @@ const ChangePassword=()=>{
             return false
     }
 
+    const isSamePassword = ()=>{
+        if (newPassword==confirmation)
+        return true
+    else 
+    return false
+    }
+
     const validateChangePassword = ()=>{
         if(!isValidCurrentPassword())
             console.log("La contraseña actual es INVÁLIDO")
@@ -84,7 +91,7 @@ const ChangePassword=()=>{
                  required 
                  onChange={(e) => setConfirmation(e.target.value)}
                  error={confirmation.length!=0 && !isValidConfirmation()}
-                 helperText={confirmation.length!=0 && !isValidConfirmation() && "Formato o contraseña incompleta"}
+                 helperText={confirmation.length!=0 && !isSamePassword() && "Las contraseñas no coinciden"}
                  />
                 <Grid style={ctrlStyle} align="center">
                     <Button 
