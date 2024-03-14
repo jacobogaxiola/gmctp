@@ -9,7 +9,9 @@ import UserForm from './components/userform';
 import Inspections from './components/inspections';
 import InspectionCapture from './components/InspectionCapture';
 
+
 import { StyledEngineProvider } from '@mui/material/styles';
+import Carrusel from './components/carrusel';
 
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
       <UserList />
       <UserForm />
       <Inspections />
-
+      <Carrusel />
       <StyledEngineProvider injectFirst>
       <InspectionCapture />
       </StyledEngineProvider>
