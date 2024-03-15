@@ -1,4 +1,4 @@
-import { Grid, Paper } from '@mui/material';
+import { Paper } from '@mui/material';
 import * as React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -19,20 +19,20 @@ export default function SimpleSlider() {
         <Paper style={paperStyle}>
       <Slider {...settings}>
         <div>
-          <h3></h3>
-          
+          <label>pene</label>
+          <img src='https://www.mundodeportivo.com/files/og_thumbnail/uploads/2020/06/15/60e7bd70dceab.png' height="100%" alt='pene es el que te comes'/>
         </div>
         <div>
-          <h3>2</h3>
+          <h3>el</h3>
         </div>
         <div>
-          <h3>3</h3>
+          <h3>que</h3>
         </div>
         <div>
-          <h3>4</h3>
+          <h3>te</h3>
         </div>
         <div>
-          <h3>5</h3>
+          <h3>comes</h3>
         </div>
         <div>
           <h3>6</h3>
