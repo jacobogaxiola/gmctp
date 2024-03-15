@@ -5,71 +5,87 @@ import { AppBar, Grid, IconButton, Paper, Toolbar, Typography } from '@mui/mater
 import MenuIcon from "@mui/icons-material/Menu";
 
 const avatarStyle={backgroundColor:"orange"}
+
 const blancoEs={color:"white"}
+const separateColumns={marginTop: "15px" }
+
+
 
 const columns = [
   {
+    
     field: 'fecha',
+    headerClassName: 'borderHeader', //////aqui cambie el color de la fecha
     headerName: 'Fecha',
     width: 100,
     editable: false,
   },
   {
     field: 'lugar de inspeccion',
+    headerClassName: 'datagridHeader',
     headerName: 'lugar de inspeccion',
     sortable: false,
     width: 120
   },
   {
     field: 'placas de unidad 1',
+    headerClassName: 'datagridHeader',
     headerName: 'placas de unidad 1',
     width: 100,
     editable: false,
   },
   {
     field: 'tipo de unidad 1', 
+    headerClassName: 'datagridHeader',
     headerName: 'Estatus',
     sortable: false,
     width: 120
   },
   {
     field: 'placas de unidad 2',
+    headerClassName: 'datagridHeader',
     headerName: 'placas de unidad 2',
     width: 100,
     editable: false,
   },
   {
     field: 'tipo de unidad 2',
+    headerClassName: 'datagridHeader',
     headerName: 'tipo de unidad 2',
     sortable: false,
     width: 120
   },
   {
     field: 'placas de unidad 3',
+    headerClassName: 'datagridHeader',
     headerName: 'placas de unidad 3',
     width: 100,
     editable: false,
   },
   {
     field: 'tipo de unidad 3',
+    headerClassName: 'datagridHeader',
     headerName: 'tipo de unidad 3',
     sortable: false,
     width: 120
   },
   {
     field: 'placas dolli',
+    headerClassName: 'datagridHeader',
     headerName: 'placas dolli',
     width: 100,
     editable: false,
   },
   {
     field: 'estatus',
+    headerClassName: 'datagridHeader',
     headerName: 'estatus',
     sortable: false,
     width: 120
   },
   {
     field: 'Motivo de cancelacion',
+    headerClassName: 'datagridHeader',
     headerName: 'Motivo de cancelacion',
     width: 100,
     editable: false,
@@ -77,6 +93,7 @@ const columns = [
 ];
 
 const rows = [
+  
   {id:1, fecha: '01/09/22', placas: '23d342d34', tipo:'Camion', estatus:'(p)'},
   {id:2, fecha: '12/12/23', placas: '234f324f3', tipo:'Tractor', estatus:'(t)'},
   {id:3, fecha: '09/08/21', placas: '2341d32sx', tipo:'Tanque', estatus:'(r)' },
@@ -104,7 +121,7 @@ export default function UserList() {
             </Typography>
           </Toolbar>
         </AppBar>
-      <DataGrid
+      <DataGrid style={separateColumns}
         rows={rows}
         columns={columns}
         initialState={{

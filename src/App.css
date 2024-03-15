@@ -6,6 +6,23 @@
   background-color: orange;
 }
 
+.colorRows {
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  background-color: rgba(169, 169, 169, 0.722);
+}
+
+.borderHeader {
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  color: white;
+  background-color: orange;
+  border-width: 3px;  
+  border-color:black;
+}
+
 .App {
   text-align: center; 
 }
@@ -37,4 +54,12 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.colorListado {
+  background-color: rgba(231, 169, 85, 0.7);
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  color: white;
 }
