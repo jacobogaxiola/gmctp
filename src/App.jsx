@@ -11,6 +11,7 @@ import InspectionCapture from './components/InspectionCapture';
 import ImageRoulette from './components/ImageRoulette';
 
 import { StyledEngineProvider } from '@mui/material/styles';
+import Carrusel from './components/carrusel';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <UserList />
       <UserForm />
       <Inspections />
+      <Carrusel />
       <ImageRoulette />
 
       <StyledEngineProvider injectFirst>

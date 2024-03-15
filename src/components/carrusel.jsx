@@ -7,7 +7,8 @@ import "slick-carousel/slick/slick-theme.css"
 const paperStyle={padding:20, height: '20', width: 280, margin: "20px auto"}
 
 
-export default function SimpleSlider() {
+
+export default function Carrusel() {
     var settings = {
       dots: true,
       infinite: true,
