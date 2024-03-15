@@ -8,6 +8,7 @@ import UserList from './components/userlist';
 import UserForm from './components/userform';
 import Inspections from './components/inspections';
 import InspectionCapture from './components/InspectionCapture';
+import ImageRoulette from './components/ImageRoulette';
 
 import { StyledEngineProvider } from '@mui/material/styles';
 
@@ -22,6 +23,7 @@ function App() {
       <UserList />
       <UserForm />
       <Inspections />
+      <ImageRoulette />
 
       <StyledEngineProvider injectFirst>
       <InspectionCapture />
