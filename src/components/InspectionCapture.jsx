@@ -57,7 +57,7 @@ const InspectionCapture = () => {
   return (
     <Grid>
       <Paper elevation={10} style={paperStyle}>
-        <AppBar position="static">
+        <AppBar position="static" color="warning">
           <Toolbar variant="dense">
             <IconButton
               edge="start"
