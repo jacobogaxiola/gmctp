@@ -8,21 +8,30 @@ import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
+
 const paperStyle={padding:20, height: '20', width: 280, margin: "20px auto"}
 
 const steps = [
   {
-    label: 'e 100',
+    label: 'Parachoques',
     imgPath: 
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjESd7EJKhd_NZ8WwbDH_zq21yxmaREBoihannCF0eZZ0e564ybtrGhMDUCsxudc6uPuA10ayBuCWy0ruZZWjS3shOrVfBTPryOZPv1rdeJyZe1sRHFef_q7r1ZTPBno_XFbDC_IU9zfRr7/s1600/E-100+tank+%252858%2529.jpg',
+      'https://www.regiologistics.com/wp-content/uploads/2020/01/parachoques-1024x576.jpg',
   },
   {
-    label: 'ratte',
-    imgPath: 'https://qph.cf2.quoracdn.net/main-qimg-98e0178a1efb2839bee65b0b1f5239c7-lq',
+    label: 'Motor',
+    imgPath: 'https://www.regiologistics.com/wp-content/uploads/2020/01/Motor-1024x576.jpg',
   },
   {
-    label: 'sturmtiger',
-    imgPath: `https://upload.wikimedia.org/wikipedia/commons/0/05/Sturmtiger_2.jpg`,
+    label: 'Llantas',
+    imgPath: 'https://www.regiologistics.com/wp-content/uploads/2020/01/Llantas-1024x576.jpg',
+  },
+  {
+    label: 'Piso del Camión',
+    imgPath: 'https://www.regiologistics.com/wp-content/uploads/2020/01/Piso-dentro-del-camio%CC%81n-1024x576.jpg',
+  },
+  {
+    label: 'Tanque de Gasolina',
+    imgPath: 'https://www.regiologistics.com/wp-content/uploads/2020/01/tanque-de-gasolina-1024x576.jpg',
   },
 ];
 
